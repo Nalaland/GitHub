@@ -65,8 +65,8 @@ driver.switch_to.default_content()
 
 
 '''ALERT'''
-alert_cm = driver.find_element(By.XPATH, "//*[@id='HTML9']/div[1]/button")
-wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='HTML9']/div[1]/button")))
+alert_cm = driver.find_element(By.XPATH, "//button[@onclick='myFunction()']")
+wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@onclick='myFunction()']")))
 alert_cm.click()
 alert = driver.switch_to.alert
 alert.accept()
@@ -84,10 +84,9 @@ s_animal = Select(driver.find_element(By.XPATH, "//select[@id='animals']"))
 s_animal.select_by_visible_text("Big Baby Cat")
 
 '''DOUBLE CLICK'''
-copy_text = driver.find_element(By.XPATH, "//*[@id='HTML10']/div[1]/button")
+copy_text = driver.find_element(By.XPATH, "//button[@ondblclick='myFunction1()']")
 action = ActionChains(driver)
 action.double_click(copy_text).perform()
-
 
 '''DRAG AND DROP'''
 drag = driver.find_element(By.XPATH, "//div[@id='draggable']")
