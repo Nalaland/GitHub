@@ -42,7 +42,8 @@ Email_address.send_keys(email)
 '''GENDER'''
 Gender = driver.find_element(By.XPATH, "//label[@for='RESULT_RadioButton-7_0']")
 Gender.click()
-
+assert Gender == driver.find_element(By.XPATH, "//label[@for='RESULT_RadioButton-7_0']")
+print("True")
 
 '''DNI'''
 Tuesday = driver.find_element(By.XPATH, "//label[@for='RESULT_CheckBox-8_2']")
